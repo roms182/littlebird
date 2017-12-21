@@ -1,0 +1,113 @@
+/* 
+font-family: 'Oswald', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Abril Fatface', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Amatic SC', cursive;
+*/
+article{
+  display: flex;
+  flex-direction: column;
+}
+section{
+  box-sizing: border-box;
+  width: 70%;
+  margin: auto;
+}
+
+section.photo{
+  width: 100%;
+}
+h1, h3, p{
+  text-align: center;
+  margin: auto;
+}
+p{
+  font-size: 2em;
+}
+p:nth-of-type(1){
+  font-family: 'Spectral SC', serif;
+}
+p:nth-of-type(2){
+  font-family: 'Pacifico', cursive;
+}
+p:nth-of-type(3){
+  font-family: 'Shadows Into Light', cursive;
+}
+.announcement{
+  padding-top: 40px;
+  height: 20vh;
+}
+
+#caret{
+  box-sizing: border-box;
+  font-size: 2.4em;
+}
+
+  .blankpage{
+    height: 70vh;
+    box-sizing: border-box;
+    background-color: pink;
+  }
+
+  .caretpage{
+    box-sizing: border-box;
+    text-align: center;
+    height: 50px;
+  }
+section.photo{
+
+  display: flex;
+  flex-direction: column;
+
+  .main-img{
+    width:100%;
+    height: 80vh;
+    object-fit: cover;
+    margin-bottom: 50px;
+  }
+
+  .photo-gallery{
+    margin-top: 50px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.img-gallery{
+  box-sizing: border-box;
+  flex: 1 1 30%;
+  height: 300px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gainsboro;
+  padding: 8px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px gainsboro;
+
+    figure{
+      height: 90%;
+      img{
+        object-fit: cover;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 0px 1px gainsboro;
+      }
+    }
+
+    figcaption{
+      height: 10%;
+      font-family: 'Indie Flower', cursive;
+      font-weight: 600;
+      text-align: center;
+      padding-top: 5px;
+    }
+}
+
+

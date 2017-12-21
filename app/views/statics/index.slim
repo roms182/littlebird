@@ -1,0 +1,37 @@
+article
+  section.announcement
+    h1 Notre petit bébé est né
+    p Marion et moi sommes très heureux de vous présenter :
+  section.blankpage
+    p Notre petite Agathe
+    p C'est une petite fille avec plein de cheveux!
+  .caretpage
+    span :i#caret.fa.fa-sort-desc.fa-5
+  section.photo.hidden
+    = image_tag('https://res.cloudinary.com/roms182/image/upload/v1513864101/IMG-20171220-WA0006_zrqmui.jpg', class: "main-img")
+    h3 Gallerie Photo
+    .photo-gallery
+      - 9.times do
+        .img-gallery
+          figure = image_tag('https://res.cloudinary.com/roms182/image/upload/v1513864101/IMG-20171220-WA0006_zrqmui.jpg')
+          figcaption un beau bébé
+      .img-gallery
+        figure = image_tag('http://res.cloudinary.com/roms182/image/upload/v1513864083/IMG-20171220-WA0013_ad4xmd.jpg')
+        figcaption un beau bébé 
+
+javascript:
+  $(document).ready(function(){
+    $('#caret').click(function(){
+      if ($('section.photo').hasClass('hidden')){
+        $('section.photo').toggleClass("hidden");
+        $('.blankpage').slideUp(2000);
+      }
+      else{
+        $('.blankpage').slideDown(2000, function() {
+          $('section.photo').toggleClass("hidden");
+        });
+      }
+    });
+  })
+  
+  
