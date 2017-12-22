@@ -8,7 +8,7 @@ article
   .caretpage
     span :i#caret.fa.fa-sort-desc.fa-5
   section.photo.hidden
-    = cl_image_tag("littlebirdy/IMG-20171220-WA0006_zrqmui.jpg", :height => 500, :crop => 'limit' ) 
+    = image_tag('http://res.cloudinary.com/roms182/image/upload/v1513864101/littlebirdy/IMG-20171220-WA0006_zrqmui.jpg', class: "main-img")
     h3 Gallerie Photo
     .photo-gallery
       - @images['resources'].each do |i|
