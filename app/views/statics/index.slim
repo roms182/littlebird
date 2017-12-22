@@ -8,7 +8,7 @@ article
   .caretpage
     span :i#caret.fa.fa-sort-desc.fa-5
   section.photo.hidden
-    = image_tag('https://res.cloudinary.com/roms182/image/upload/v1513864101/IMG-20171220-WA0006_zrqmui.jpg', class: "main-img")
+    = cl_image_tag("littlebirdy/IMG-20171220-WA0006_zrqmui.jpg", :height => 500, :crop => 'limit' ) 
     h3 Gallerie Photo
     .photo-gallery
       - @images['resources'].each do |i|
@@ -17,10 +17,6 @@ article
           figcaption un beau bébé
 
         
-        
-
-        
-
 javascript:
   $(document).ready(function(){
     $('#caret').click(function(){

@@ -18,7 +18,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem "figaro"
-gem "cloudinary"
+gem 'cloudinary'
 
 
 
