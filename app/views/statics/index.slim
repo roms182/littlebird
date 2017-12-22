@@ -16,7 +16,7 @@ article
     .photo-gallery
       - @images['resources'].each do |i|
         .img-gallery
-          figure = image_tag("http://res.cloudinary.com/roms182/image/upload/w_600,h_400,c_crop,v#{i['version']}/#{i['public_id']}.#{i['format']}") 
+          figure = image_tag("http://res.cloudinary.com/roms182/image/upload/w_600,h_400,c_crop/v#{i['version']}/#{i['public_id']}.#{i['format']}") 
           figcaption un beau bébé
 
         
