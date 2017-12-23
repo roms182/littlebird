@@ -23,26 +23,18 @@ h1, h3, p{
 p{
   font-size: 2em;
 }
-p:nth-of-type(1){
+.spectra{
   font-family: 'Spectral SC', serif;
 }
-p:nth-of-type(2){
+.pacifio{
   font-family: 'Pacifico', cursive;
 }
-p:nth-of-type(3){
+.into{
   font-family: 'Shadows Into Light', cursive;
 }
-.main-page{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 2px solid blue;
-  } 
 
 .announcement{
-  height: 150px;
-  background-color: yellow;
+  height: 100px;
 }
 
 #caret{
@@ -52,9 +44,10 @@ p:nth-of-type(3){
 
 
   .blankpage{
-  
+    height: 75vh;
     box-sizing: border-box;
-    background-color: pink;
+    padding: 20px;
+    border: 1px dotted black;
   }
 
   .caretpage{

@@ -1,23 +1,27 @@
 article
-  .main-page
-    section.announcement
-      h1 Heureux Evénement !!
-      p Marion et moi sommes très heureux de vous présenter :
-    section.blankpage
-      p Notre petite Agathe
-      p C'est une petite fille avec plein de cheveux!
-      p Elle est née le 17 Décembre 2017, à 5h42
-      p Elle pèse 4 kilos, pour 50 cm :-)
-    .caretpage
-      span :i#caret.fa.fa-sort-desc.fa-5
-  section.photo.hidden
-    = image_tag('http://res.cloudinary.com/roms182/image/upload/v1513864101/littlebirdy/IMG-20171220-WA0006_zrqmui.jpg', class: "main-img")
-    h3 Gallerie Photo
-    .photo-gallery
-      - @images['resources'].each do |i|
-        .img-gallery
-          figure = image_tag("http://res.cloudinary.com/roms182/image/upload/w_600,h_400,c_crop/v#{i['version']}/#{i['public_id']}.#{i['format']}") 
-          figcaption un beau bébé
+  section.announcement
+    h1
+      span
+        i.fa.fa-star aria-hidden="true"
+      | &nbsp;Heureux Evénement&nbsp; 
+      span
+        i.fa.fa-star aria-hidden="true"
+    p.spectra Marion et moi sommes très heureux de vous présenter :
+  section.blankpage
+    h1.pacifio Agathe
+    p C'est une petite fille avec plein de cheveux!
+    p Elle est née le 17 Décembre 2017, à 5h42
+    p Elle pèse 4 kilos, pour 50 cm :-)
+  .caretpage
+    span :i#caret.fa.fa-sort-desc.fa-5
+section.photo.hidden
+  = image_tag('http://res.cloudinary.com/roms182/image/upload/v1513864101/littlebirdy/IMG-20171220-WA0006_zrqmui.jpg', class: "main-img")
+  h3 Gallerie Photo
+  .photo-gallery
+    - @images['resources'].each do |i|
+      .img-gallery
+        figure = image_tag("http://res.cloudinary.com/roms182/image/upload/v#{i['version']}/#{i['public_id']}.#{i['format']}") 
+        figcaption = i['created_at'].split('T')[0]
 
         
 javascript:
