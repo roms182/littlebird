@@ -1,22 +1,41 @@
 article
   section.announcement
-    h1
+    h1.pangolin
+      | &nbsp;Heureux Evénement&nbsp;
+    .stars.text-center
       span
+        i.fa.fa-star.gold aria-hidden="true" 
         i.fa.fa-star aria-hidden="true"
-      | &nbsp;Heureux Evénement&nbsp; 
-      span
+        i.fa.fa-star.gold aria-hidden="true"
         i.fa.fa-star aria-hidden="true"
-    p.spectra Marion et moi sommes très heureux de vous présenter :
+        i.fa.fa-star.gold aria-hidden="true"
+        i.fa.fa-star aria-hidden="true"
+        i.fa.fa-star.gold aria-hidden="true" 
   section.blankpage
-    h1.pacifio Agathe
-    p C'est une petite fille avec plein de cheveux!
-    p Elle est née le 17 Décembre 2017, à 5h42
-    p Elle pèse 4 kilos, pour 50 cm :-)
-  .caretpage
-    span :i#caret.fa.fa-sort-desc.fa-5
-section.photo.hidden
+    .text
+      p.amatic Nous sommes très heureux de vous présenter :
+      p.pacifio Agathe
+      p.amatic Une jolie petite fille, avec tout plein de cheveux!
+      p.amatic 
+        | Elle est née le 
+        strong 17 Décembre 2017
+        | , à 5h42
+      p.amatic 
+        | Elle mesure 
+        strong 50 cm
+        | , pour un joli poids de 
+        strong 4 kilos
+        | :-)
+  section.caretpage
+    span.gold-hover 
+      i#caret.fa.fa-sort-desc.fa-5
+  section.margin-hide
+article.photo.hidden#gallery
   = image_tag('http://res.cloudinary.com/roms182/image/upload/v1513864101/littlebirdy/IMG-20171220-WA0006_zrqmui.jpg', class: "main-img")
-  h3 Gallerie Photo
+  h1.pangolin 
+    | Gallerie 
+    span.gold 
+      | Photo
   .photo-gallery
     - @images['resources'].each do |i|
       .img-gallery
@@ -27,14 +46,17 @@ section.photo.hidden
 javascript:
   $(document).ready(function(){
     $('#caret').click(function(){
-      if ($('section.photo').hasClass('hidden')){
-        $('section.photo').toggleClass("hidden");
+      if ($('#gallery').hasClass('hidden')){
+        $('#gallery').toggleClass("hidden");
         $('.blankpage').slideUp(2000);
+        $('.margin-hide').slideUp(2000);
+
       }
       else{
         $('.blankpage').slideDown(2000, function() {
-          $('section.photo').toggleClass("hidden");
+          $('#gallery').toggleClass("hidden");
         });
+        $('.margin-hide').slideDown(2000);
       }
     });
   })

@@ -8,7 +8,6 @@ font-family: 'Amatic SC', cursive;
 */
 
 section{
-  box-sizing: border-box;
   width: 70%;
   margin: auto;
 }
@@ -16,25 +15,17 @@ section{
 section.photo{
   width: 100%;
 }
-h1, h3, p{
+h1, h2, h3, p{
   text-align: center;
-  margin: auto;
+  margin: 0px auto;
 }
 p{
   font-size: 2em;
 }
-.spectra{
-  font-family: 'Spectral SC', serif;
-}
-.pacifio{
-  font-family: 'Pacifico', cursive;
-}
-.into{
-  font-family: 'Shadows Into Light', cursive;
-}
+
 
 .announcement{
-  height: 100px;
+  margin-top: 50px;
 }
 
 #caret{
@@ -42,21 +33,35 @@ p{
   font-size: 2.4em;
 }
 
+.stars{
+  margin: auto;
+    i{
+      margin: 2px;
+    }
+}
 
   .blankpage{
-    height: 75vh;
-    box-sizing: border-box;
-    padding: 20px;
-    border: 1px dotted black;
+    margin: 50px auto 30px auto;
   }
 
+  .margin-hide{
+    height: 170px;
+  }
+  .text{
+    background-color: #F9F9F9;
+    width: 60%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px dotted black;
+    vertical-align: center;
+  }
   .caretpage{
     box-sizing: border-box;
     text-align: center;
-    height: 50px;
+    height: 40px;
   }
-section.photo{
-
+.photo{
   display: flex;
   flex-direction: column;
 
@@ -107,6 +112,14 @@ section.photo{
       text-align: center;
       padding-top: 5px;
     }
+}
+
+.gold{
+  color: #DAA520;
+}
+
+.gold-hover:hover{
+  @extend .gold;
 }
 
 
