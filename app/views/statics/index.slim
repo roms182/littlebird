@@ -39,8 +39,11 @@ article.photo.hidden#gallery
   .photo-gallery
     - @images['resources'].each do |i|
       .img-gallery
-        figure = image_tag("http://res.cloudinary.com/roms182/image/upload/v#{i['version']}/#{i['public_id']}.#{i['format']}") 
-        figcaption = i['created_at'].split('T')[0]
+        figure 
+          = link_to("#", class: "tototo", "data-toggle" => "modal", "data-target" => "#myModal", "data-image" => "#{i['version']}/#{i['public_id']}.#{i['format']}" )
+            = image_tag("http://res.cloudinary.com/roms182/image/upload/c_crop/v#{i['version']}/#{i['public_id']}.#{i['format']}") 
+          figcaption = i['created_at'].split('T')[0]
+= render partial: 'shared/modal'
 
         
 javascript:
@@ -58,6 +61,13 @@ javascript:
         });
         $('.margin-hide').slideDown(2000);
       }
+
+      $('.tototo').click(function(e){
+        e.preventDefault;
+        var titi = "background-image: url('http://res.cloudinary.com/roms182/image/upload/c_crop/v" + $(this).data('image') + "');background-size:contain;background-repeat:no-repeat";
+        $('#tata').attr('style', titi)
+        $('#photoModal').modal('toggle');
+      })
     });
   })
 
